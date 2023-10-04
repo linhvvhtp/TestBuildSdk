@@ -40,3 +40,17 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
+
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.linhvvhtp'
+                artifactId = 'toasterlibrary'
+                version = '0.1.6'
+            }
+        }
+    }
+}
